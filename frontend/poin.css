@@ -1,0 +1,25 @@
+/* ---------- Halaman Poin & Reward ---------- */
+.poin-saldo {
+  padding: 24px; display: flex; flex-wrap: wrap; gap: 16px;
+  align-items: center; justify-content: space-between; margin: 12px 0;
+}
+.poin-label { margin: 0 0 4px; color: var(--color-text-secondary); font-weight: 600; }
+.poin-angka { margin: 0; font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--color-purple); }
+.poin-rincian { display: flex; flex-wrap: wrap; gap: 20px; color: var(--color-text-secondary); font-weight: 600; }
+
+.grid-reward {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px; margin: 12px 0 24px;
+}
+.kartu-reward { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.kartu-reward .tombol { margin-top: auto; }
+.reward-biaya { margin: 0; font-weight: 800; color: var(--color-blue); }
+
+.daftar-riwayat { list-style: none; margin: 8px 0 24px; padding: 0; display: grid; gap: 8px; }
+.item-riwayat {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+  padding: 10px 14px; border: 1px solid var(--color-border);
+  border-radius: 12px; background: var(--color-surface);
+}
+.poin-plus { font-weight: 800; color: var(--color-teal-green); }
+.poin-minus { font-weight: 800; color: var(--color-purple); }

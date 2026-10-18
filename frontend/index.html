@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TiketKita — Travel Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layanan.css">
+  <link rel="stylesheet" href="poin.css">
+  <link rel="stylesheet" href="foto.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-isi wadah">
+      <a class="logo" href="#/beranda">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+          <path d="M2 21l21-9L2 3v7l15 2-15 2z" fill="currentColor"/>
+        </svg>
+        <span>Tiket<b>Kita</b></span>
+      </a>
+      <button class="menu-tombol" id="menuTombol" type="button"
+              aria-label="Buka menu" aria-expanded="false">&#9776;</button>
+      <nav class="menu" id="menu">
+        <a href="#/beranda" data-nav="beranda">Beranda</a>
+        <div class="dropdown">
+          <button class="dropdown-tombol" id="dropdownTombol" type="button"
+                  aria-expanded="false">Layanan &#9662;</button>
+          <div class="dropdown-isi" id="dropdownIsi">
+            <a href="#/pesawat" data-nav="pesawat">Pesawat</a>
+            <a href="#/kereta" data-nav="kereta">Kereta Api</a>
+            <a href="#/mobil" data-nav="mobil">Sewa Mobil</a>
+            <a href="#/hotel" data-nav="hotel">Hotel</a>
+            <a href="#/aktivitas" data-nav="aktivitas">Aktivitas</a>
+            <a href="#/paket" data-nav="paket">Paket Wisata</a>
+            <a href="#/discovery" data-nav="discovery">Discovery</a>
+          </div>
+        </div>
+        <a href="#/pesanan" data-nav="pesanan">Pesanan Saya</a>
+        <a href="#/poin" data-nav="poin">Poin &amp; Reward</a>
+        <a class="tombol tombol-aksen" href="#/demo" data-nav="demo">Demo Struktur Data</a>
+      </nav>
+    </div>
+    <div class="garis-aksen"></div>
+  </header>
+
+  <main>
+
+    <!-- HALAMAN: BERANDA -->
+    <section class="halaman" data-halaman="beranda">
+      <div class="hero">
+        <div class="hero-dekorasi" aria-hidden="true"></div>
+        <div class="wadah hero-isi">
+          <p class="label">Proyek Struktur Data</p>
+          <h1>Perjalanan Mudah, Harga Bersahabat</h1>
+          <p class="hero-sub">Temukan perjalanan terbaikmu dan bandingkan harga tiket dalam satu tempat.</p>
+          <a class="tombol tombol-utama" href="#/pesawat">Mulai Cari Tiket Pesawat</a>
+        </div>
+      </div>
+
+      <div class="wadah bagian">
+        <div class="judul-bagian"><h2>Layanan TiketKita</h2></div>
+        <div class="grid-layanan">
+
+          <a class="kartu kartu-layanan" href="#/pesawat">
+            <div class="foto-wadah" data-foto="pesawat" data-alt="Pesawat"></div>
+            <strong>Pesawat</strong>
+            <span class="deskripsi-kecil">Cari, urutkan, dan pilih tiket pesawat.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+          <a class="kartu kartu-layanan" href="#/kereta">
+            <div class="foto-wadah" data-foto="kereta" data-alt="Kereta Api"></div>
+            <strong>Kereta Api</strong>
+            <span class="deskripsi-kecil">Cari dan bandingkan tiket kereta.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+          <a class="kartu kartu-layanan" href="#/mobil">
+            <div class="foto-wadah" data-foto="mobil" data-alt="Sewa Mobil"></div>
+            <strong>Sewa Mobil</strong>
+            <span class="deskripsi-kecil">Pilih mobil dan hitung biaya sewa.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+          <a class="kartu kartu-layanan" href="#/hotel">
+            <div class="foto-wadah" data-foto="hotel" data-alt="Hotel"></div>
+            <strong>Hotel</strong>
+            <span class="deskripsi-kecil">Hotel, vila, dan apartemen.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+          <a class="kartu kartu-layanan" href="#/aktivitas">
+            <div class="foto-wadah" data-foto="aktivitas" data-alt="Aktivitas"></div>
+            <strong>Aktivitas</strong>
+            <span class="deskripsi-kecil">Wisata, hiburan, spa, dan konser.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+          <a class="kartu kartu-layanan" href="#/paket">
+            <div class="foto-wadah" data-foto="paket" data-alt="Paket Wisata"></div>
+            <strong>Paket Wisata</strong>
+            <span class="deskripsi-kecil">Paket perjalanan alam, pantai, dan budaya.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+          <a class="kartu kartu-layanan" href="#/discovery">
+            <div class="foto-wadah" data-foto="discovery" data-alt="Discovery"></div>
+            <strong>Discovery</strong>
+            <span class="deskripsi-kecil">Temukan destinasi sesuai seleramu.</span>
+            <span class="badge badge-siap">Tersedia</span>
+          </a>
+
+        </div>
+        <p class="catatan">Seluruh data pada TiketKita adalah contoh (dummy) untuk keperluan tugas, bukan data layanan sungguhan.</p>
+      </div>
+    </section>
+
+    <!-- HALAMAN: PESAWAT -->
+    <section class="halaman" data-halaman="pesawat">
+      <div class="wadah bagian">
+        <div class="judul-bagian"><h2>Pesawat</h2></div>
+        <form class="kartu form-cari" id="formCari" novalidate>
+          <div class="kolom">
+            <label for="inputAsal">Kota asal</label>
+            <input id="inputAsal" list="daftarKota" placeholder="mis. Surabaya" autocomplete="off">
+          </div>
+          <div class="kolom">
+            <label for="inputTujuan">Kota tujuan</label>
+            <input id="inputTujuan" list="daftarKota" placeholder="mis. Jakarta" autocomplete="off">
+          </div>
+          <div class="kolom">
+            <label for="inputTanggal">Tanggal berangkat</label>
+            <input id="inputTanggal" type="date">
+          </div>
+          <button class="tombol tombol-utama" type="submit">Cari Tiket</button>
+        </form>
+        <p class="galat" id="galatForm" role="alert"></p>
+        <p class="catatan">
+          Data tiket adalah contoh (dummy), bukan data penerbangan sungguhan.
+          Pencarian memakai Linear Search pada kota tujuan; kota asal hanya menyaring tampilan hasil,
+          dan tanggal belum memengaruhi hasil karena data contoh tidak memiliki tanggal.
+        </p>
+        <datalist id="daftarKota">
+          <option value="Surabaya"><option value="Jakarta"><option value="Denpasar">
+          <option value="Bandung"><option value="Yogyakarta"><option value="Medan">
+        </datalist>
+      </div>
+
+      <div class="wadah bagian" id="hasilPesawatWadah" hidden>
+        <div class="judul-bagian"><h2>Hasil Pencarian</h2></div>
+        <p class="ringkasan" id="ringkasanPesawat"></p>
+        <div class="grid-tiket" id="hasilPesawat"></div>
+        <p class="catatan">Log Linear Search lengkap ada di <a href="#/demo">Demo Struktur Data</a>.</p>
+      </div>
+
+      <div class="wadah bagian">
+        <div class="judul-bagian">
+          <h2>Daftar Tiket</h2>
+          <span class="chip" id="jumlahTiketTeks"></span>
+        </div>
+        <div class="baris-tombol">
+          <button class="tombol tombol-utama" type="button" data-urutan="termurah">Urutkan Termurah</button>
+          <button class="tombol tombol-utama" type="button" data-urutan="termahal">Urutkan Termahal</button>
+          <button class="tombol tombol-garis aksi-reset" type="button">Reset Urutan</button>
+        </div>
+        <p class="ringkasan" id="ringkasanSortPesawat" hidden></p>
+        <p class="catatan">Pengurutan memakai Bubble Sort di backend C++. Log dan animasi ada di <a href="#/demo">Demo Struktur Data</a>.</p>
+        <div class="grid-tiket" id="daftarKartu"></div>
+      </div>
+    </section>
+
+    <!-- HALAMAN: KERETA, MOBIL, HOTEL, AKTIVITAS, PAKET (satu halaman generik, diisi layanan.js) -->
+    <section class="halaman" data-halaman="kereta mobil hotel aktivitas paket">
+      <div class="wadah bagian">
+        <div class="judul-bagian">
+          <h2 id="judulLayanan"></h2>
+          <span class="chip" id="jumlahLayanan"></span>
+        </div>
+        <p class="deskripsi" id="deskLayanan"></p>
+        <div class="tab-layanan" id="tabLayanan"></div>
+
+        <form class="kartu form-cari" id="formLayanan" novalidate></form>
+        <p class="galat" id="galatLayanan" role="alert"></p>
+        <p class="catatan">
+          Seluruh data (harga, jadwal, ketersediaan) adalah contoh buatan proyek, bukan informasi real-time.
+          Pencarian memakai Linear Search pada kota tujuan/lokasi; log lengkap ada di bagian bawah halaman.
+        </p>
+
+        <div class="baris-tombol">
+          <button class="tombol tombol-utama" type="button" id="urutMurahLayanan">Urutkan Termurah</button>
+          <button class="tombol tombol-utama" type="button" id="urutMahalLayanan">Urutkan Termahal</button>
+          <button class="tombol tombol-garis" type="button" id="resetLayanan">Reset Urutan</button>
+          <button class="tombol tombol-garis" type="button" id="semuaLayanan">Tampilkan Semua</button>
+        </div>
+        <p class="ringkasan" id="ringkasanSortLayanan" hidden></p>
+        <p class="ringkasan" id="ringkasanCariLayanan" hidden></p>
+
+        <div class="grid-tiket" id="gridLayanan"></div>
+
+        <details class="log-detail">
+          <summary>Log Bubble Sort</summary>
+          <p class="catatan">Jalankan pengurutan untuk melihat setiap perbandingan dan pertukaran.</p>
+          <div class="log" id="logSortLayanan"></div>
+        </details>
+        <details class="log-detail">
+          <summary>Log Linear Search</summary>
+          <p class="catatan">Jalankan pencarian untuk melihat elemen yang diperiksa satu per satu.</p>
+          <div class="log" id="logCariLayanan"></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- HALAMAN: DISCOVERY (diisi discovery.js) -->
+    <section class="halaman" data-halaman="discovery">
+      <div class="wadah bagian">
+        <div class="judul-bagian">
+          <h2>Discovery</h2>
+          <span class="chip" id="jumlahDiscovery"></span>
+        </div>
+        <p class="deskripsi">
+          Pilih tema perjalanan untuk menemukan aktivitas dan paket wisata yang cocok.
+          Setiap tema dicari dengan Linear Search pada atribut tema (tipe) di backend C++,
+          dijalankan pada data Aktivitas dan data Paket Wisata.
+        </p>
+        <div class="tab-layanan" id="tabTema"></div>
+        <p class="galat" id="galatDiscovery" role="alert"></p>
+        <p class="ringkasan" id="ringkasanDiscovery" hidden></p>
+        <p class="catatan">
+          Discovery hanya untuk menjelajah. Untuk memesan, buka halaman Aktivitas atau Paket Wisata.
+          Pengurutan harga tersedia di kedua halaman itu.
+        </p>
+
+        <div class="grid-tiket" id="gridDiscovery"></div>
+
+        <details class="log-detail">
+          <summary>Log Linear Search — Aktivitas</summary>
+          <p class="catatan">Pilih tema untuk melihat elemen aktivitas yang diperiksa satu per satu.</p>
+          <div class="log" id="logDiscAktivitas"></div>
+        </details>
+        <details class="log-detail">
+          <summary>Log Linear Search — Paket Wisata</summary>
+          <p class="catatan">Pilih tema untuk melihat elemen paket yang diperiksa satu per satu.</p>
+          <div class="log" id="logDiscPaket"></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- HALAMAN: POIN & REWARD (diisi poin.js) -->
+    <section class="halaman" data-halaman="poin">
+      <div class="wadah bagian">
+        <div class="judul-bagian"><h2>Poin &amp; Reward</h2></div>
+        <p class="deskripsi">
+          TiketKita Points dihitung dari pesanan yang berstatus Berhasil di Pesanan Saya.
+          Setiap Rp10.000 total pesanan bernilai 1 poin, dibulatkan ke bawah per pesanan.
+        </p>
+
+        <div class="kartu poin-saldo">
+          <div>
+            <p class="poin-label">Saldo poin</p>
+            <p class="poin-angka" id="angkaSaldo">0</p>
+          </div>
+          <div class="poin-rincian">
+            <span id="poinTerkumpul"></span>
+            <span id="poinTerpakai"></span>
+          </div>
+        </div>
+        <p class="galat" id="galatPoin" role="alert"></p>
+        <p class="catatan">
+          Semua poin dan reward adalah simulasi. Data berasal dari browser ini (localStorage),
+          jadi jika riwayat pesanan dikosongkan, poin ikut berkurang.
+          Kupon hasil penukaran belum dapat dipakai pada pesanan.
+        </p>
+
+        <div class="judul-bagian"><h2>Reward Zone</h2></div>
+        <div class="grid-reward" id="gridReward"></div>
+
+        <div class="judul-bagian"><h2>Poin Masuk</h2></div>
+        <ul class="daftar-riwayat" id="daftarPoinMasuk"></ul>
+
+        <div class="judul-bagian">
+          <h2>Kupon Saya</h2>
+          <button class="tombol tombol-garis" type="button" id="tombolResetKupon">Hapus Semua Kupon</button>
+        </div>
+        <ul class="daftar-riwayat" id="daftarKupon"></ul>
+      </div>
+    </section>
+
+    <!-- HALAMAN: PESANAN SAYA -->
+    <section class="halaman" data-halaman="pesanan">
+      <div class="wadah bagian">
+        <div class="judul-bagian">
+          <h2>Pesanan Saya</h2>
+          <button class="tombol tombol-garis" type="button" id="tombolKosongkan">Kosongkan Riwayat</button>
+        </div>
+        <p class="catatan">
+          Semua pesanan adalah simulasi dan tidak ada pembayaran sungguhan. Data disimpan di penyimpanan lokal
+          browser ini (localStorage), sehingga hanya ada di browser dan perangkat ini dan hilang jika data situs dihapus.
+        </p>
+        <p class="ringkasan" id="ringkasanPesanan" hidden></p>
+        <div class="daftar-pesanan" id="daftarPesanan"></div>
+      </div>
+    </section>
+
+    <!-- HALAMAN: DEMO STRUKTUR DATA -->
+    <section class="halaman" data-halaman="demo">
+      <div class="wadah bagian">
+        <div class="judul-bagian"><h2>Demo Struktur Data</h2></div>
+        <div class="dua-kolom">
+
+          <div class="kartu panel" id="demo-sorting">
+            <h3>Panel Sorting — Bubble Sort</h3>
+            <p class="deskripsi">Mengurutkan array tiket berdasarkan harga. Setiap perbandingan dan pertukaran dicatat di log.</p>
+            <div class="baris-tombol">
+              <button class="tombol tombol-utama" type="button" data-urutan="termurah">Harga Termurah</button>
+              <button class="tombol tombol-utama" type="button" data-urutan="termahal">Harga Termahal</button>
+              <button class="tombol tombol-garis aksi-reset" type="button" id="tombolReset">Reset Urutan</button>
+            </div>
+            <p class="ringkasan" id="ringkasanSort">Belum dijalankan.</p>
+
+            <div class="visual" aria-label="Visualisasi Bubble Sort">
+              <div class="visual-kontrol">
+                <label for="kecepatan">Kecepatan</label>
+                <select id="kecepatan">
+                  <option value="600">Lambat</option>
+                  <option value="250" selected>Sedang</option>
+                  <option value="80">Cepat</option>
+                </select>
+                <button class="tombol tombol-garis" type="button" id="tombolUlang">Putar Ulang</button>
+                <button class="tombol tombol-garis" type="button" id="tombolLewati">Lewati</button>
+              </div>
+              <div class="batang-wadah" id="batangWadah"></div>
+              <p class="keterangan-visual" id="keteranganVisual">Jalankan Bubble Sort untuk melihat animasinya.</p>
+              <div class="legenda">
+                <span class="l-biasa">Belum diperiksa</span>
+                <span class="l-banding">Dibandingkan</span>
+                <span class="l-tukar">Ditukar</span>
+                <span class="l-akhir">Posisi akhir</span>
+              </div>
+            </div>
+
+            <div class="log" id="logSort"></div>
+          </div>
+
+          <div class="kartu panel" id="demo-searching">
+            <h3>Panel Searching — Linear Search</h3>
+            <p class="deskripsi">Memeriksa tiket satu per satu berdasarkan kota tujuan (tidak peka huruf besar/kecil).</p>
+            <div class="baris-tombol">
+              <input id="inputCariPanel" placeholder="Kota tujuan, mis. Jakarta" list="daftarKota" autocomplete="off">
+              <button class="tombol tombol-utama" type="button" id="tombolCariPanel">Cari</button>
+            </div>
+            <p class="ringkasan" id="ringkasanCari">Belum dijalankan.</p>
+            <p class="galat" id="pesanCari" role="alert"></p>
+            <div class="grid-tiket kecil" id="hasilCari"></div>
+            <div class="log" id="logCari"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="wadah bagian">
+        <div class="judul-bagian"><h2>Tentang Proyek</h2></div>
+        <p class="deskripsi">
+          TiketKita adalah proyek akademik mata kuliah Struktur Data. Algoritma berjalan di backend C++,
+          sedangkan halaman ini hanya menampilkan hasilnya.
+        </p>
+        <div class="grid-penjelasan">
+
+          <article class="kartu penjelasan">
+            <h3>Array</h3>
+            <p>Menyimpan banyak tiket berurutan di memori. Elemen diakses dengan indeks.</p>
+            <pre><code>Tiket daftarTiket[MAKS_TIKET];
+int jumlahTiket = 12;
+daftarTiket[0]; // tiket pertama</code></pre>
+          </article>
+
+          <article class="kartu penjelasan">
+            <h3>Struct</h3>
+            <p>Mengelompokkan data satu tiket dalam satu paket, sehingga satu tiket bisa dipindah atau ditukar sekaligus.</p>
+            <pre><code>struct Tiket {
+    int id;
+    std::string kode, maskapai;
+    std::string asal, tujuan;
+    int harga;
+};</code></pre>
+          </article>
+
+          <article class="kartu penjelasan">
+            <h3>Pointer</h3>
+            <p>Menyimpan alamat memori. <code>&amp;</code> mengambil alamat, <code>*</code> mengambil isi, <code>-&gt;</code> mengakses anggota struct lewat pointer.</p>
+            <pre><code>Tiket* p = daftarTiket;
+p-&gt;harga;   // isi tiket yang ditunjuk
+p++;         // pindah ke tiket berikutnya</code></pre>
+          </article>
+
+          <article class="kartu penjelasan">
+            <h3>Sorting (Bubble Sort)</h3>
+            <p>Membandingkan dua elemen bersebelahan dan menukarnya jika urutannya salah. Terbaik O(n), terburuk O(n²), ruang O(1).</p>
+            <pre><code>if (kiri-&gt;harga &gt; kanan-&gt;harga) {
+    tukar(kiri, kanan);
+}</code></pre>
+          </article>
+
+          <article class="kartu penjelasan">
+            <h3>Searching (Linear Search)</h3>
+            <p>Memeriksa elemen satu per satu dari indeks 0. Teks dinormalisasi (huruf kecil, tanpa spasi tepi) agar tidak peka huruf besar/kecil.</p>
+            <pre><code>if (normalisasi(p-&gt;tujuan) == kunci) {
+    hasil.push_back(p);
+}</code></pre>
+          </article>
+
+          <article class="kartu penjelasan">
+            <h3>Struct Produk (layanan lain)</h3>
+            <p>Kereta, mobil, hotel, vila, apartemen, aktivitas, dan paket memakai satu struct dan satu array. Algoritma bekerja pada daftar pointer ke elemen kategori tertentu.</p>
+            <pre><code>vector&lt;Produk*&gt; daftar =
+    ambilProdukKategori("kereta");
+tukarProduk(daftar[j], daftar[j + 1]);</code></pre>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wadah">
+      <strong>TiketKita — Travel Booking</strong>
+      <p>Proyek akademik mata kuliah Struktur Data. Data hanya contoh, bukan data layanan aktual.
+         <a href="#/demo">Tentang Proyek</a></p>
+    </div>
+  </footer>
+
+  <!-- Dialog detail -->
+  <dialog id="dialogDetail">
+    <div id="isiDetail"></div>
+    <button class="tombol tombol-utama" type="button" id="tutupDetail">Tutup</button>
+  </dialog>
+
+  <!-- Dialog ringkasan pesanan -->
+  <dialog id="dialogRingkasan">
+    <div id="isiRingkasan"></div>
+  </dialog>
+
+  <script src="foto.js"></script>
+  <script src="script.js"></script>
+  <script src="pesanan.js"></script>
+  <script src="layanan.js"></script>
+  <script src="discovery.js"></script>
+  <script src="poin.js"></script>
+  <script src="navigasi.js"></script>
+</body>
+</html>
