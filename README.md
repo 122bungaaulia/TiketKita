@@ -6,7 +6,7 @@ Website pemesanan tiket dan akomodasi bertema Tiketing (terinspirasi Traveloka),
 - NIM: 25050974122
 - Prodi: Pendidikan Teknologi Informasi, Universitas Negeri Surabaya
 - Mata kuliah: Struktur Data
-- Video demo: [link YouTube]
+- Video demo: [https://youtu.be/9GBEKouPKys]
 
 ## Layanan
 
